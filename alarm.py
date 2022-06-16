@@ -1,30 +1,45 @@
+from multiprocessing import Process
+
 import os
+import time
 import datetime
 
-title = "Alarm Manager"
-# audio = 'assets/sound.opus'
+title = "Alarm"
 audio  = 'assets/marc.m4a'
+# audio = 'assets/sound.opus'
+
+def play_audio():
+    os.system("2>/dev/null 1>/dev/null " + "mpv --no-video --loop " + audio)
+
+play_audio_process = Process(target=play_audio)
 
 os.system("figlet " + title)
 
-wakeup_hour = input("Enter hour: ")
-wakeup_minute = input("Enter minute: ")
+hour = input("Enter hour: ")
+minute = input("Enter minute: ")
 
-wakeup = wakeup_hour + ":" + wakeup_minute
+time_input = hour + ":" + minute
 
-print("\nWake up at " + wakeup + "...")
+print("\nExecute at " + time_input + "...")
 
 while(1):
     system_time = datetime.datetime.now()
     system_time_formatted = system_time.strftime("%H:%M")
 
-    if (system_time_formatted == wakeup):
+    if (system_time_formatted == time_input):
         break
 
+play_audio_process.start()
+time.sleep(1)
+
 while(1):
-    os.system("mpv " + audio)
-#    prompt = input("Want to turn it down? ")
-#
-#    if (prompt == "y"):
-#        break
+    prompt = input("\nWant to turn it off? [Y/n] ").lower()
+
+    if (prompt == "y" or prompt == ""):
+        break
+
+play_audio_process.terminate()
+os.system("kill $(pidof mpv)")
+
+exit(0)
 
