@@ -5,7 +5,7 @@ import time
 import datetime
 
 title = "Alarm Manager"
-audio  = "assets/marc.m4a"
+audio  = "../assets/marc.m4a"
 count_exit_prompt = 0
 
 def play_audio():
