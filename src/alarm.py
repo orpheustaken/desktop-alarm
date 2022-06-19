@@ -1,17 +1,14 @@
 import audio
+import message
+import user_input
 
-import subprocess
 import datetime
 
-title = "Alarm Manager"
 count_exit_prompt = 0
 
-subprocess.run("figlet " + title, shell=True)
+message.print_title()
 
-hour = input("Enter hour: ")
-minute = input("Enter minute: ")
-
-time_input = hour + ":" + minute
+time_input = user_input.handle_user_input()
 
 print("\nExecute at " + time_input + "...")
 
@@ -25,8 +22,9 @@ while 1:
 
 audio.play_audio()
 
-subprocess.run("fortune | cowsay", shell=True)
+message.print_random_quote()
 
+# Equations to solve
 while 1:
     if count_exit_prompt == 0:
         prompt = input("Want to turn it off? [Y/n] ").lower()
