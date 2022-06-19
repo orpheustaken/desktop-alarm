@@ -1,8 +1,8 @@
 import audio
-import message
-import user_input
 import equation
+import message
 import time_sys
+import user_input
 
 message.print_title()
 
