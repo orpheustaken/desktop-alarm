@@ -2,7 +2,7 @@ from multiprocessing import Process
 
 import subprocess
 
-audio_asset = "../assets/marc.m4a"
+audio_asset = "../assets/pulp_fiction.m4a"
 
 
 def mpv_audio():
