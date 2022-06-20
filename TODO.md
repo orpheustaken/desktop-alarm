@@ -1,6 +1,6 @@
 # TODOs
 
-* Better code structure instead of everything in only one file
+* ~~Better code structure instead of everything in only one file~~
 
 * Error checking:
     * Dependencies
@@ -12,3 +12,5 @@
 * Equations to solve when attempting to stop the alarm
 
 * **Signal** to handle CTRL+C
+
+* **alarm.conf** file support
