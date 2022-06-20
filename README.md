@@ -7,9 +7,9 @@ Because I have serious problems waking up too early in the morning.
 ### Dependencies
 
 Other than what is listed in `requirements.txt`, you'll also need the following packages:
-    * mpv
-    * figlet
-    * cowsay
+* mpv
+* figlet
+* cowsay
 
 And, obviously, I've only tested this on my personal machine running Arch Linux with the latest version of everything. Good Luck.
 
