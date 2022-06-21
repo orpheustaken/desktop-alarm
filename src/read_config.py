@@ -12,4 +12,6 @@
 #         return foo
 #
 #
+#     Each value is supposed to have its own getter, I guess...
+#
 #     Remind to google the best way for doing this in Python
