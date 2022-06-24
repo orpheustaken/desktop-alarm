@@ -13,4 +13,4 @@ Other than what is listed in `requirements.txt`, you'll also need the following 
 
 And, obviously, I've only tested this on my personal machine running Arch Linux with the latest version of everything. Good Luck.
 
-![desktop_alarm](https://user-images.githubusercontent.com/63078965/174213901-509c8e55-eff8-4b66-b2c7-1b7e35380e91.png)
+![desktop_alarm](https://user-images.githubusercontent.com/63078965/175437725-9f3faa24-040f-48c6-8665-e5b7e457f625.png)
