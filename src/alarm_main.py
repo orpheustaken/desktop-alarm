@@ -8,6 +8,8 @@ message.print_title()
 
 time_input = user_input.handle_user_input()
 
+message.print_execution_time(time_input)
+
 # Wait until time defined by user to proceed
 time_sys.check_system_time_loop(time_input)
 
