@@ -5,6 +5,7 @@
 * Error checking:
     * Dependencies
     * ~~User input~~
+    * If mpv was launched
 
 * Way to calculate the remaining time until time defined by user
     * And then implementing a progress bar using **tqdm**
