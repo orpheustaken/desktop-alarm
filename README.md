@@ -39,7 +39,7 @@ pip install -r requirements.txt
 Finally, the System Dependencies can be installed:
 
 ```console
-sudo pacman -S cowsay figlet fortune mpv
+sudo pacman -S cowsay figlet fortune-mod mpv
 ```
 
 To run the Alarm, simply execute `alarm_main.py`:
