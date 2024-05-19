@@ -1,8 +1,4 @@
-import audio
-import equation
-import message
-import time_sys
-import user_input
+from src import audio, equation, message, time_sys, user_input
 
 message.print_title()
 
