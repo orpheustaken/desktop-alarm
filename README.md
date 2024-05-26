@@ -7,7 +7,7 @@
 
 ### Dependencies
 
-Besides the most recent version of Python, Pip and what is listed in `requirements.txt`, the following packages must also be installed:
+Besides the most recent version of Python, PIP and what is listed in `requirements.txt`, the following packages must also be installed:
 
 * cowsay
 * figlet
