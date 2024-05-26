@@ -45,6 +45,6 @@ sudo pacman -S cowsay figlet fortune-mod mpv
 To run the Alarm, simply execute `alarm_main.py`:
 
 ```console
-cd src/
-python alarm_main.py
+cd app/
+python __main__.py
 ```
