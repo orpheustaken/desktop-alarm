@@ -1,23 +1,41 @@
-from src import audio, equation, message, time_sys, user_input
+from domain.audio import Audio
+from domain.equation import Equation
+from domain.input import Input
+from domain.message import Message
+from domain.schedule import Schedule
+
 
 class Main:
+    def __init__(self):
+        self.time_input = None
+        self.audio = Audio()
+        self.equation = Equation()
+        self.input = Input()
+        self.message = Message()
+        self.schedule = Schedule()
 
-    message.print_title()
+    def run(self):
+        self.message.print_title()
 
-    time_input = user_input.handle_user_input()
+        self.time_input = self.input.handle_user_input()
 
-    message.print_execution_time(time_input)
+        self.message.print_execution_time(self.time_input)
 
-    # Wait until time defined by user to proceed
-    time_sys.check_system_time_loop(time_input)
+        # wait until time defined by user to proceed
+        self.schedule.check_system_time_loop(self.time_input)
 
-    audio.play_audio()
+        self.audio.play_audio()
 
-    message.print_random_quote()
+        self.message.print_random_quote()
 
-    # Equations to solve for then be able to stop the sound and exit
-    equation.enter_equation_loop()
+        # TODO: equations to solve for then be able to stop the sound and exit
+        self.equation.enter_equation_loop()
 
-    audio.stop_audio()
+        self.audio.stop_audio()
 
-    exit(0)
+        exit(0)
+
+
+if __name__ == "__main__":
+    app = Main()
+    app.run()

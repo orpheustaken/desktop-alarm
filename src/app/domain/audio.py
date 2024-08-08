@@ -2,22 +2,23 @@ from multiprocessing import Process
 
 import subprocess
 
-audio_asset = "../assets/marc.m4a"
 
+class Audio:
+    audio_asset = "src/assets/marc.m4a"
 
-def mpv_audio():
-    subprocess.run(
-        "2>/dev/null 1>/dev/null " + "mpv --no-video --loop " + audio_asset, shell=True
-    )
+    @staticmethod
+    def mpv_audio():
+        subprocess.run(
+            "2>/dev/null 1>/dev/null " + "mpv --no-video --loop " + Audio.audio_asset, shell=True
+        )
 
+    audio_subprocess = Process(target=mpv_audio)
 
-play_audio_process = Process(target=mpv_audio)
+    @staticmethod
+    def play_audio():
+        Audio.audio_subprocess.start()
 
-
-def play_audio():
-    play_audio_process.start()
-
-
-def stop_audio():
-    play_audio_process.terminate()
-    subprocess.run("kill $(pidof mpv)", shell=True)
+    @staticmethod
+    def stop_audio():
+        Audio.audio_subprocess.terminate()
+        subprocess.run("kill $(pidof mpv)", shell=True)
