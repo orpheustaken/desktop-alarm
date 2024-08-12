@@ -42,9 +42,9 @@ Finally, the System Dependencies can be installed:
 sudo pacman -S cowsay figlet fortune-mod mpv
 ```
 
-To run the Alarm, simply execute `__main__.py`:
+To run the Alarm, simply execute `main.py`:
 
 ```console
 cd src/app/
-python __main__.py
+python main.py
 ```
